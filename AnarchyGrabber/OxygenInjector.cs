@@ -38,26 +38,6 @@ require(process.env.modDir + '\\{indexFile}')";
         }
 
 
-        public static bool Eject(DiscordBuild build, string dirName)
-        {
-            if (!TryGetDiscordPath(build, out string path))
-                return false;
-
-            try
-            {
-                File.WriteAllText(path + "/index.js", "module.exports = require('./core.asar');");
-
-                Directory.Delete($"{path}/{dirName}", true);
-
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-
         public static bool TryGetDiscordPath(DiscordBuild build, out string path)
         {
             string buildStr;

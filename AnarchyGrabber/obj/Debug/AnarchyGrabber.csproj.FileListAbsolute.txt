@@ -6,3 +6,4 @@ C:\Users\edhbu\source\repos\AnarchyGrabber2\AnarchyGrabber\obj\Debug\AnarchyGrab
 C:\Users\edhbu\source\repos\AnarchyGrabber2\AnarchyGrabber\obj\Debug\AnarchyGrabber.exe
 C:\Users\edhbu\source\repos\AnarchyGrabber2\AnarchyGrabber\obj\Debug\AnarchyGrabber.pdb
 C:\Users\edhbu\source\repos\AnarchyGrabber2\AnarchyGrabber\obj\Debug\AnarchyGrabber.csproj.CoreCompileInputs.cache
+C:\Users\edhbu\source\repos\AnarchyGrabber2\AnarchyGrabber\obj\Debug\AnarchyGrabber.csprojAssemblyReference.cache
